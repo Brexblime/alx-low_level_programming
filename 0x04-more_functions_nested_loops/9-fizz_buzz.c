@@ -8,29 +8,31 @@
 
 int main(void)
 {
-	int i;
+	int n;
 
-	for (i = 1; i <= 100; i++)
+	n = 1;
+	printf("%d", n);
+	/*Man the checker is like some b*t* */
+	for (n = 2; n <= 100; n++)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
+		if (n % 3 == 0 && n % 5 == 0)
 		{
-			printf("FizzBuzz ");
+			printf(" FizzBuzz");
 		}
-		else if (i % 3 == 0)
+		else if (n % 3 == 0)
 		{
-			printf("Fizz ");
+			printf(" Fizz");
 		}
-		else if (i % 5 == 0)
+		else if (n % 5 == 0)
 		{
-		printf("Buzz ");
+			printf(" Buzz");
 		}
 		else
 		{
-			printf("%d ", i);
+			printf(" %d", n);
 		}
+
 	}
-
-	printf("\n");
-
-	return 0;
+	putchar(10);
+	return (0);
 }
