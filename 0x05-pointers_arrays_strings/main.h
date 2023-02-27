@@ -8,7 +8,7 @@ int _putchar(char c);
 void modif_my_param(int m);
 void swap_int(int *a, int *b);
 int _strlen(char *s);
-
+void _puts(char *str);
 
 
 
