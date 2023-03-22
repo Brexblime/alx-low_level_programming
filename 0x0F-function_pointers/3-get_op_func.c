@@ -6,7 +6,7 @@
  * @s: operator passed as argument to the program
  *
  * Return: pointer to the function that corresponds to the operator
- *         given as a parameter
+ * given as a parameter
  */
 
 int (*get_op_func(char *s))(int, int)
@@ -24,7 +24,7 @@ int (*get_op_func(char *s))(int, int)
 	while (ops[i].op)
 	{
 		if (*(ops[i].op) == *s)
- 		return (ops[i].f);
+		return (ops[i].f);
 		i++;
 	}
 	return (NULL);
