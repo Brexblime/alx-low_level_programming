@@ -37,10 +37,10 @@ int main(int argc, char *argv[])
 			exit(99); }
 	} while (rd == 1024);
 	/* Close file descriptors */
-	if (fd_from == -1)
+	if (close(fd_from) == -1)
 	{	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
 		exit(100); }
-	if (fd_to == -1)
+	if (close(fd_to) == -1)
 	{	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to);
 		exit(100); }
 
