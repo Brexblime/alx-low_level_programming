@@ -1,16 +1,20 @@
 #include "hash_tables.h"
-
 /**
- * key_index - computes the index
- * @key: the key
- * @size: the size of the array
- * Return: the index at which the key/value pair should be stored 
- *	in the array of the hash table
-*/
+ * key_index - gives the index of a key in a hash table.
+ * @key: The key
+ * @size: size of the array of the hash table
+ * Return: index at which the key/value pair should be stored
+ */
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
-	unsigned long int hash_value = hash_djb2(key);
-	unsigned long int index = hash_value % size;
+	unsigned long int hash;
 
-	return (index);
+	if (key == NULL || size == 0)
+	{
+		return 0;
+	}
+
+	hash = hash_djb2(key);
+
+	return (hash % size);
 }
